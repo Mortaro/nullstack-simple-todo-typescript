@@ -11,18 +11,18 @@ class TodoList extends Nullstack {
     return (
       <li>
         <label>
-          <input type="checkbox" bind={todo.complete} /> 
+          <input type="checkbox" bind={todo.complete} />
           {todo.description}
         </label>
       </li>
     )
   }
-  
+
   render({ todos }) {
     return (
       <div>
         <TodoForm />
-        <ul> 
+        <ul>
           {todos.map((todo) => <Todo todo={todo} />)}
         </ul>
       </div>
