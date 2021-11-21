@@ -11,11 +11,11 @@ class TodoForm extends Nullstack {
     })
     this.description = '';
   }
-  
+
   render() {
     return (
       <form onsubmit={this.addTodo}>
-        <input bind={this.description} />
+        <input bind={this.description} required autocomplete="off" />
         <button> Add todo </button>
       </form>
     )
