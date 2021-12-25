@@ -1,13 +1,14 @@
 import Nullstack from 'nullstack';
+import { ApplicationClientContext } from './types';
 
 class TodoForm extends Nullstack {
 
-  description = '';
+  description: string = '';
 
-  addTodo({ todos }) {
+  addTodo({ todos }: ApplicationClientContext) {
     todos.push({
       description: this.description,
-      complete: false
+      complete: true
     })
     this.description = '';
   }
