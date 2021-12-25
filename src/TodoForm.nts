@@ -8,7 +8,7 @@ class TodoForm extends Nullstack {
   addTodo({ todos }: ApplicationClientContext) {
     todos.push({
       description: this.description,
-      complete: true
+      complete: false
     })
     this.description = '';
   }
