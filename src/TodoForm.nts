@@ -1,16 +1,26 @@
-import Nullstack from 'nullstack';
+import Nullstack, { NullstackServerContext } from 'nullstack';
 import { ApplicationClientContext } from './types';
+
+// not required but makes TS happy
+interface TodoForm {
+  mockInsertTodo(): Promise<boolean>
+}
 
 class TodoForm extends Nullstack {
 
   description = '';
 
-  addTodo({ todos }: ApplicationClientContext) {
+  static async mockInsertTodo({ environment }: NullstackServerContext): Promise<boolean> {
+    return environment.server
+  }
+
+  async addTodo({ todos }: ApplicationClientContext) {
     todos.push({
       description: this.description,
       complete: false
     })
     this.description = '';
+    await this.mockInsertTodo()
   }
 
   render() {
