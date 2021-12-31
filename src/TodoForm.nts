@@ -3,7 +3,7 @@ import { ApplicationClientContext } from './types';
 
 class TodoForm extends Nullstack {
 
-  description: string = '';
+  description = '';
 
   addTodo({ todos }: ApplicationClientContext) {
     todos.push({
