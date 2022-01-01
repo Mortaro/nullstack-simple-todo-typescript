@@ -5,7 +5,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nullstack": "github:nullstack/nullstack#typescript"
+    "nullstack": "github:nullstack/nullstack#next"
   },
   "scripts": {
     "start": "npx nullstack start",

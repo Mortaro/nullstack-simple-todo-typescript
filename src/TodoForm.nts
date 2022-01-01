@@ -1,11 +1,6 @@
 import Nullstack, { NullstackServerContext } from 'nullstack';
 import { ApplicationClientContext } from './types';
 
-// not required but makes TS happy
-interface TodoForm {
-  mockInsertTodo(): Promise<boolean>
-}
-
 class TodoForm extends Nullstack {
 
   description = '';
@@ -20,7 +15,7 @@ class TodoForm extends Nullstack {
       complete: false
     })
     this.description = '';
-    await this.mockInsertTodo()
+    await TodoForm.mockInsertTodo({})
   }
 
   render() {
