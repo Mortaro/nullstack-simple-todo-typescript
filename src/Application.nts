@@ -1,6 +1,6 @@
 import Nullstack from 'nullstack';
-import TodoCounter from './TodoCounter.nts';
-import TodoList from './TodoList.nts';
+import TodoCounter from './TodoCounter';
+import TodoList from './TodoList';
 import { ApplicationClientContext } from './types';
 
 class Application extends Nullstack {

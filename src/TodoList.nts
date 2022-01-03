@@ -1,5 +1,5 @@
 import Nullstack from 'nullstack';
-import TodoForm from './TodoForm.nts';
+import TodoForm from './TodoForm';
 import { ApplicationClientContext, Todo } from './types';
 
 class TodoList extends Nullstack {
