@@ -3,28 +3,16 @@ import TodoCounter from './TodoCounter';
 import TodoList from './TodoList';
 import { ApplicationClientContext } from './types';
 
-function Bunda() {
-  return <div> Bunda </div>
-}
-
 class Application extends Nullstack {
 
-  showBunda = true
-
-  prepare(context: ApplicationClientContext) {
-    context.showBunda = true
-    context.page.locale = 'pt-BR';
+  prepare({ page }: ApplicationClientContext) {
+    page.locale = 'pt-BR';
   }
 
-  toggleBunda(context) {
-    context.showBunda = !context.showBunda
-  }
-
-  render({ showBunda }) {
+  render() {
     return (
       <main>
-        <button onclick={this.toggleBunda}>toggle bunda</button>
-        {!showBunda ? <Bunda /> : <TodoList />}
+        <TodoList />
         <TodoCounter />
       </main>
     )
